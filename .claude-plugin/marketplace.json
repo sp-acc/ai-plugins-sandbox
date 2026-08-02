@@ -3,21 +3,16 @@
   "owner": {
     "name": "Srdjan Perovic"
   },
-  "metadata": {
-    "description": "Experiment marketplace for AI plugins.",
-    "version": "1.0.0"
-  },
+  "description": "Experiment marketplace for AI plugins.",
+  "homepage": "https://github.com/sp-acc/ai-plugins-sandbox",
+  "repository": "https://github.com/sp-acc/ai-plugins-sandbox",
   "plugins": [
     {
       "name": "animal-in-latin",
       "source": "./plugins/animal-in-latin",
       "description": "Educational skill providing the scientific (Latin) name and descriptions for animals.",
-      "version": "1.0.1",
-      "author": "Srdjan Perovic",
-      "category": "Education",
-      "tags": ["education", "animals", "latin"],
-      "homepage": "https://example.com/sp-acc/ai-plugins-sandbox",
-      "repository": "https://github.com/sp-acc/ai-plugins-sandbox"
+      "version": "1.0.2",
+      "author": { "name": "Srdjan Perovic" }
     }
   ]
 }
