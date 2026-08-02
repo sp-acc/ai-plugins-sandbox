@@ -8,8 +8,8 @@
   "repository": "https://github.com/sp-acc/ai-plugins-sandbox",
   "plugins": [
     {
-      "name": "animal-in-latin",
-      "source": "./plugins/animal-in-latin",
+      "name": "animal-latin",
+      "source": "./plugins/animal-latin",
       "description": "Educational skill providing the scientific (Latin) name and descriptions for animals.",
       "version": "1.0.2",
       "author": { "name": "Srdjan Perovic" }

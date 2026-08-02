@@ -16,7 +16,7 @@ The repository currently includes one educational plugin:
 .
 ├── README.md
 ├── plugins/
-│   └── animal-in-latin/
+│   └── animal-latin/
 │       ├── plugin.json
 │       └── skills/
 │           └── animal-latin/
@@ -47,7 +47,7 @@ claude plugin marketplace browse sp-acc-ai-marketplace
 ### 3) Install the plugin
 
 ```bash
-claude plugin install animal-in-latin@sp-acc-ai-marketplace
+claude plugin install animal-latin@sp-acc-ai-marketplace
 ```
 
 ### 4) Use the plugin

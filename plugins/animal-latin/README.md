@@ -38,7 +38,7 @@ The skill follows a consistent response pattern:
 
 ## Plugin metadata
 
-- Name: `animal-in-latin`
+- Name: `animal-latin`
 - Version: `1.0.0`
 - Author: `Srdjan Perovic`
 - Category: `Education`
@@ -47,7 +47,7 @@ The skill follows a consistent response pattern:
 ## Repository layout
 
 ```text
-plugins/animal-in-latin/
+plugins/animal-latin/
 ├── plugin.json
 ├── README.md
 └── skills/
