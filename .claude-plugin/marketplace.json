@@ -1,0 +1,23 @@
+{
+  "name": "sp-acc-ai-marketplace",
+  "owner": {
+    "name": "Srdjan Perovic"
+  },
+  "metadata": {
+    "description": "A marketplace for AI plugins.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "animal-in-latin",
+      "source": "./plugins/animal-in-latin/plugin.json",
+      "description": "Educational skill providing the scientific (Latin) name and descriptions for animals.",
+      "version": "1.0.0",
+      "author": "Srdjan Perovic",
+      "category": "Education",
+      "tags": ["education", "animals", "latin"],
+      "homepage": "https://example.com/sp-acc/ai-plugins-sandbox",
+      "repository": "https://github.com/sp-acc/ai-plugins-sandbox/plugins/animal-in-latin"
+    }
+  ]
+}
