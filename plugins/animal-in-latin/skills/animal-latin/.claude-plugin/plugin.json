@@ -1,7 +1,6 @@
 {
   "name": "animal-in-latin",
   "description": "Educational skill providing the scientific (Latin) name and descriptions for animals.",
-  "version": "1.0.0",
-  "author": "Srdjan Perovic",
-  "skills": "./skills/animal-latin"
+  "version": "1.0.1",
+  "author": "Srdjan Perovic"
 }
