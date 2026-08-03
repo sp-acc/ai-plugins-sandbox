@@ -1,0 +1,55 @@
+name: Sync Plugin Versions
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'plugins/**/plugin.json'
+  workflow_dispatch:
+
+jobs:
+  sync-versions:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Discover and Sync Plugin Versions
+        run: |
+          MARKETPLACE_FILES=(".claude-plugin/marketplace.json" ".github/plugin/marketplace.json")
+
+          # Find every plugin.json inside the plugins/ directory
+          find plugins -name "plugin.json" | while read -r plugin_file; do
+            # Read plugin name and version
+            PLUGIN_NAME=$(jq -r '.name' "$plugin_file")
+            PLUGIN_VER=$(jq -r '.version' "$plugin_file")
+
+            echo "Syncing plugin: $PLUGIN_NAME to version: $PLUGIN_VER"
+
+            # Update each marketplace file if it exists
+            for mk_path in "${MARKETPLACE_FILES[@]}"; do
+              if [ -f "$mk_path" ]; then
+                jq --arg name "$PLUGIN_NAME" --arg ver "$PLUGIN_VER" \
+                  '(.plugins[] | select(.name == $name) | .version) = $ver' \
+                  "$mk_path" > tmp.json && mv tmp.json "$mk_path"
+              fi
+            done
+          done
+
+      - name: Commit and Push Changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add .
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: sync marketplace plugin versions"
+            git push
+          fi
