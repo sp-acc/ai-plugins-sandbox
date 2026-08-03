@@ -12,18 +12,18 @@ When the user invokes the skill, the plugin responds with:
 - whether the animal is extant or extinct
 - a brief educational description
 
-The plugin supports the `/animal-latin` command and is designed for quick lookup and classroom-style learning.
+The plugin supports the `/in-latin` command and is designed for quick lookup and classroom-style learning.
 
 ## Skill command
 
-- Command: `/animal-latin`
+- Command: `/in-latin`
 - Argument hint: `[animal name]`
 
 ## Example prompts
 
-- `/animal-latin lion`
-- `/animal-latin shark`
-- `/animal-latin`
+- `/in-latin lion`
+- `/in-latin shark`
+- `/in-latin`
 - What is the Latin name of a dolphin?
 
 ## Behavior
@@ -38,8 +38,8 @@ The skill follows a consistent response pattern:
 
 ## Plugin metadata
 
-- Name: `animal-latin`
-- Version: `1.0.0`
+- Name: `in-latin`
+- Version: `1.0.3`
 - Author: `Srdjan Perovic`
 - Category: `Education`
 - Tags: `education`, `animals`, `latin`
@@ -47,18 +47,18 @@ The skill follows a consistent response pattern:
 ## Repository layout
 
 ```text
-plugins/animal-latin/
+plugins/animal/
 ├── plugin.json
 ├── README.md
 └── skills/
-    └── animal-latin/
+    └── in-latin/
         └── SKILL.md
 ```
 
 ## Files
 
 - [plugin.json](plugin.json) — plugin manifest and metadata
-- [skills/animal-latin/SKILL.md](skills/animal-latin/SKILL.md) — skill logic and instruction rules
+- [skills/in-latin/SKILL.md](skills/in-latin/SKILL.md) — skill logic and instruction rules
 
 ## Example response format
 

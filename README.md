@@ -16,10 +16,10 @@ The repository currently includes one educational plugin:
 .
 ├── README.md
 ├── plugins/
-│   └── animal-latin/
+│   └── animal/
 │       ├── plugin.json
 │       └── skills/
-│           └── animal-latin/
+│           └── in-latin/
 │               └── SKILL.md
 ├── .claude-plugin/
 │   └── marketplace.json
@@ -41,13 +41,13 @@ claude plugin marketplace add github:sp-acc/ai-plugins-sandbox
 ### 2) Browse the marketplace
 
 ```bash
-claude plugin marketplace browse sp-acc-ai-marketplace
+claude plugin marketplace browse sp-marketplace
 ```
 
 ### 3) Install the plugin
 
 ```bash
-claude plugin install animal-latin@sp-acc-ai-marketplace
+claude plugin install animal@sp-marketplace
 ```
 
 ### 4) Use the plugin
@@ -55,7 +55,7 @@ claude plugin install animal-latin@sp-acc-ai-marketplace
 After installation, invoke the plugin through the slash command:
 
 ```text
-/animal-latin tiger
+/in-latin tiger
 ```
 
 The skill will return:
