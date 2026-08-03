@@ -48,16 +48,17 @@ The skill follows a consistent response pattern:
 
 ```text
 plugins/animal/
-├── plugin.json
 ├── README.md
 └── skills/
     └── in-latin/
-        └── SKILL.md
+        ├── SKILL.md
+        └── .claude-plugin/
+            └── plugin.json
 ```
 
 ## Files
 
-- [plugin.json](plugin.json) — plugin manifest and metadata
+- [skills/in-latin/.claude-plugin/plugin.json](skills/in-latin/.claude-plugin/plugin.json) — plugin manifest and metadata
 - [skills/in-latin/SKILL.md](skills/in-latin/SKILL.md) — skill logic and instruction rules
 
 ## Example response format

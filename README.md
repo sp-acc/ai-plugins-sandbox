@@ -17,10 +17,12 @@ The repository currently includes one educational plugin:
 ├── README.md
 ├── plugins/
 │   └── animal/
-│       ├── plugin.json
+│       ├── README.md
 │       └── skills/
 │           └── in-latin/
-│               └── SKILL.md
+│               ├── SKILL.md
+│               └── .claude-plugin/
+│                   └── plugin.json
 ├── .claude-plugin/
 │   └── marketplace.json
 └── .github/
@@ -47,7 +49,7 @@ claude plugin marketplace browse sp-marketplace
 ### 3) Install the plugin
 
 ```bash
-claude plugin install animal@sp-marketplace
+claude plugin install in-latin@sp-marketplace
 ```
 
 ### 4) Use the plugin
