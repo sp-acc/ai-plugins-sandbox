@@ -28,18 +28,22 @@ The plugin supports the `/in-latin` command and is designed for quick lookup and
 
 ## Behavior
 
-The skill follows a consistent response pattern:
+The skill follows a consistent, honest response pattern:
 
-- accepts English-only input
-- asks the user to re-enter names in English when another language is supplied
-- handles missing input by returning a few example animals
-- treats fictional or unrecognized creatures as unsupported
+- accepts animal names in any language and answers in English
+- normalizes plurals, articles, and variants ("lions", "the lion", "a lioness")
+- answers several animals in one request, one block per animal
+- distinguishes a single famous species from a whole group (e.g. "dolphin" covers ~40 species) using a Group / Example-species format
+- flags ambiguity between well-known species (e.g. gray wolf vs. red wolf) instead of silently assuming
+- handles missing input by returning a few example animals from different habitats
+- treats fictional or mythical creatures as having no scientific name and invites a real animal
 - includes extinct-species details with approximate time periods when relevant
+- never invents a Latin name — it says when it isn't sure rather than guessing
 
 ## Plugin metadata
 
 - Name: `in-latin`
-- Version: `1.0.3`
+- Version: `1.1.0`
 - Author: `Srdjan Perovic`
 - Category: `Education`
 - Tags: `education`, `animals`, `latin`
